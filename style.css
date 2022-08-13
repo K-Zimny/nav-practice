@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 20px;
 }
@@ -53,10 +57,11 @@ html {
   }
 
   .nav-list ul {
-    /* display: none; */
-    height: 0;
-    transition: all 1s ease;
+    display: none;
+    /* height: 0; */
+    transition: all 1s ease 1s;
     /* overflow: hidden; */
+    opacity: 0;
   }
 
   .nav-list ul.hidden {
@@ -71,6 +76,8 @@ html {
     align-items: center;
     padding: 2rem;
     height: auto;
+    opacity: 1;
+    transition: all 1s ease 1s;
   }
 
   .nav-list li {

@@ -4,9 +4,9 @@ const navUl = document.querySelector(".nav-list ul");
 hamburgerBtn.addEventListener("click", function () {
   if (navUl.classList.contains("hidden")) {
     navUl.classList.remove("hidden");
-    navUl.style.height = auto;
+    // navUl.style.height = "0%";
   } else {
     navUl.classList.add("hidden");
-    navUl.style.height = 0;
+    // navUl.style.height = "auto";
   }
 });
