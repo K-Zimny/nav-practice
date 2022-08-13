@@ -20,6 +20,8 @@ html {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+
+  position: relative;
 }
 
 .nav-logo {
@@ -55,12 +57,12 @@ html {
     width: 50px;
     display: block;
   }
-
+  /* 
   .nav-list ul {
     display: none;
-    /* height: 0; */
+    height: 0;
     transition: all 1s ease 1s;
-    /* overflow: hidden; */
+    overflow: hidden;
     opacity: 0;
   }
 
@@ -82,5 +84,40 @@ html {
 
   .nav-list li {
     padding: 2rem;
+  } */
+
+  .nav-list ul {
+    all: unset;
+
+    /* display: none; */
+    opacity: 0;
+    /* transition: all 250ms ease-in-out; */
+    transition: transform 1s ease-in-out;
+    transform-origin: top;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: scale(0);
+    /* transition-delay: 250ms; */
+  }
+
+  .nav-list ul.hidden {
+    display: block;
+    /* transition: scale 0ms ease-in-out; */
+    /* transition: opacity 1s ease-in-out; */
+    /* position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; */
+    /* text-align: center; */
+    background: lightblue;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .nav-list li {
+    margin: 1rem 0;
   }
 }
